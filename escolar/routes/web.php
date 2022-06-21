@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'InmuebleController@index')->name('inmueble');
+Route::get('/', 'DocentesController@index')->name('docentes');
 
 Auth::routes();
 
