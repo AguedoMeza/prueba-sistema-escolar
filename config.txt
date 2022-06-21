@@ -1,0 +1,11 @@
+El proyecto se encuentra en laravel 
+con a version de php 7.3 y el framewrk puede correr de la version 5 a la 8 
+
+1.- Realizar un composer update
+2.- Generar el archivo en ambiente para la conexion a la bd con "cp .env.example .env"
+3.- Generar key para que el proyecto corra con "php artisan key:generate"
+3.-	Istalar los paquetes de laravel para graficos con "composer require laravel/ui:^1.0"
+4.- Instalar los componentes del framework VUE con "php artisan ui vue"
+5.- Instalar paqueteria de Node con "npm install"
+6.- Instalar paquete de google maps para el front con "npm install --save vue2-google-maps"
+
