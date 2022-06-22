@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Docentes;
+use App\docentes;
 
 class DocentesController extends Controller
 {
@@ -14,7 +14,7 @@ class DocentesController extends Controller
 	
     public function index()
     {
-		$docentes = Docentes::get();	
+		$docentes = docentes::get();	
         return view('admin.docentes.index',compact('docentes'));
     }
 }

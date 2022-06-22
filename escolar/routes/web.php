@@ -23,4 +23,6 @@ Route::get('/usuarios/crear', 'UsuariosController@create')->name('usuarios.creat
 
 Route::get('/docentes', 'DocentesController@index')->name('docentes');
 
+Route::get('/materias', 'MateriasController@index')->name('materias');
+
 

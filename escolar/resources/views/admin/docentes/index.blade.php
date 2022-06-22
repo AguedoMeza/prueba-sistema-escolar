@@ -10,7 +10,7 @@
 					<div class="row">
 						<div class="col-sm-12 col-md-12 col-lg-12">
 							<table class="table">
-								<thead>
+								<thead class="thead-dark">
 									<tr>
 										<th>Clave</th>
 										<th>Nombre</th>
@@ -21,10 +21,10 @@
 								<tbody>
 									@foreach($docentes AS $d)
 									<tr>
-										<td>{{ $u->nombre.' '.$u->ap_paterno.' '.$u->ap_materno }}</td>
-										<td>{{ $u->contrato }}</td>
-										<td></td>
-										<td></td>
+										<td>{{ $d->clave }}</td>
+										<td>{{ $d->nombre.' '.$d->ap_paterno.' '.$d->ap_materno }}</td>
+										<td>{{ $d->contrato }}</td>
+										<td><a href=""><i class="fas fa-phone fa-lg"></i></a></td>
 									</tr>
 									@endforeach
 								</tbody>
