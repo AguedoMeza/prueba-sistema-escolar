@@ -55,5 +55,7 @@ class AlumnosController extends Controller
             'calle' => $request->calle,
             'numero' => $request->numero
         ]);
+
+        return redirect()->route('alumnos');
     }
 }

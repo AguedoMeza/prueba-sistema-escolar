@@ -55,7 +55,8 @@ class DocentesController extends Controller
         
 
 
-        return $json;
+        //return $json;
+        return redirect()->route('docentes');
 		
     }
 
