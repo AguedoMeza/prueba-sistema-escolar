@@ -24,7 +24,9 @@ Route::get('/usuarios/crear', 'UsuariosController@create')->name('usuarios.creat
 Route::get('/docentes', 'DocentesController@index')->name('docentes');
 Route::get('/docentes/crear', 'DocentesController@create')->name('docentes.create');
 Route::post('/docentes/store', 'DocentesController@store')->name('docentes.store');
+Route::get('/docentes/asignarMateria', 'DocentesController@asignarMateria')->name('docentes.asignarMateria');
 
 Route::get('/materias', 'MateriasController@index')->name('materias');
+Route::get('/materias/store', 'MateriasController@store')->name('materias.store');
 
 

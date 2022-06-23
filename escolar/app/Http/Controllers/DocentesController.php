@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\docentes;
+use App\materias;
 
 class DocentesController extends Controller
 {
@@ -56,5 +57,19 @@ class DocentesController extends Controller
 
         return $json;
 		
+    }
+
+    public function asignarMateria()
+    {
+        $post = docentes::find(1);  
+
+        $materia = materias::create([
+            'nombre' => "algoritmia",
+            'inicioSemestre' => "2022-06-22",
+            'finSemestre' => "2022-06-22",
+            'creditos' => 10
+        ]);
+        
+        $post->docentes_materias()->save($materia);
     }
 }

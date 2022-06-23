@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class materias extends Model
 {
+    protected $guarded = [];  
+
     protected $table = 'Materias';
 
     public function materias_docentes(){
