@@ -15,7 +15,7 @@ class DocentesController extends Controller
 	
     public function index()
     {
-		$docentes = docentes::get();	
+		 $docentes = docentes::get();	
          return view('admin.docentes.index',compact('docentes'));
         //$test = $docentes[0]['telefonos'];
          //return $test;

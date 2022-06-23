@@ -31,6 +31,10 @@ Route::get('/materias', 'MateriasController@index')->name('materias');
 Route::get('/materias/store', 'MateriasController@store')->name('materias.store');
 
 Route::get('/alumnos/asignarMateria', 'AlumnosController@asignarMateria')->name('alumnos.asignarMateria');
+Route::get('/alumnos/verAlumnosMaterias', 'AlumnosController@verAlumnosMaterias')->name('alumnos.verAlumnosMaterias');
+Route::get('/alumnos', 'AlumnosController@index')->name('alumnos');
+Route::get('/alumnos/create', 'AlumnosController@create')->name('alumnos.create');
+
 
 
 

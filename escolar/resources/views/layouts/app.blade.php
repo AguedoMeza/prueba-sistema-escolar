@@ -60,6 +60,9 @@
                                     <a class="dropdown-item" href="{{ route('docentes') }}">
                                         {{ __('Docentes') }}
                                     </a>
+                                    <a class="dropdown-item" href="{{ route('alumnos') }}">
+                                        {{ __('Alumnos') }}
+                                    </a>
                                     <a class="dropdown-item" href="{{ route('usuarios') }}">
                                         {{ __('Usuarios') }}
                                     </a>
