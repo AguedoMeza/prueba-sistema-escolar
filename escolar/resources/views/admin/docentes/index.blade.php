@@ -35,7 +35,14 @@
 										<td>{{ $d->clave }}</td>
 										<td>{{ $d->nombre.' '.$d->ap_paterno.' '.$d->ap_materno }}</td>
 										<td>{{ $d->contrato }}</td>
-										<td>{{ $test = json_encode($docentes[$c]['telefonos']['number']) }}</td>
+										<td>
+											@php
+												$test = json_encode($docentes[$c]->telefonos)
+											@endphp
+											
+											{{ $test }}
+										
+										</td>
 									</tr>
 									@php
 										$c++;

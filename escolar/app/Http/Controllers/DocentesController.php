@@ -16,8 +16,8 @@ class DocentesController extends Controller
     {
 		$docentes = docentes::get();	
          return view('admin.docentes.index',compact('docentes'));
-        //$test = $docentes[0]['telefonos']['number'];
-        //return $test;
+        //$test = $docentes[0]['telefonos'];
+         //return $test;
     }
 
     public function create()
@@ -34,11 +34,27 @@ class DocentesController extends Controller
         $d->ap_paterno = $request->ap_paterno;
         $d->ap_materno = $request->ap_materno;
         $d->contrato = $request->contrato;
-        $d->save();
+       
 		
 		$totalTelefonos = $request->totCaracteristicas;
+        $telefonos = array();
 
-        return json_encode($totalTelefonos);
+        for($i=1;$i<=$totalTelefonos;$i++){
+			if($request['inputC'.$i] != NULL){
+                $r = $request['inputC'.$i];
+                $telefonos[] = array('telefono'.$i => "$r");
+			}
+		}
+        $json = json_encode($telefonos);
+
+        $d->telefonos = json_decode($json);
+
+        $d->save();
+
+        
+
+
+        return $json;
 		
     }
 }
