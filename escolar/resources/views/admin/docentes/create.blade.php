@@ -11,7 +11,7 @@
 							Docentes / Crear
 						</div>
 						<div class="col-md-2 right">
-							<a href="">Cancelar</a>
+							<a href="{{ route('docentes') }}">Cancelar</a>
 						</div>
 					</div>
 				</div>
@@ -20,14 +20,14 @@
                     @csrf
 					<div class="row">
 						<div class="col-md-3">
-							<label>Nombre</label>
-							<input type="text" class="form-control" name="nombre" id="nombre" autofocus required>
-						</div>
-						<div class="col-md-3">
 							<label>Clave</label>
 							<input type="text" class="form-control" name="clave" id="clave" placeholder="PCOM-XXX/##" required>
 						</div>
-						
+
+						<div class="col-md-3">
+							<label>Nombre</label>
+							<input type="text" class="form-control" name="nombre" id="nombre" autofocus required>
+						</div>
 						
 						<div class="col-md-2">
 							<label>Apellido Paterno</label>
