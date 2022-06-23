@@ -8,7 +8,7 @@ class alumnos extends Model
 {
     protected $table = 'Alumnos';
 
-    public function docentes_materias(){
+    public function alumnos_materias(){
         return $this->morphToMany('App\materias','materiable');
     }
 }

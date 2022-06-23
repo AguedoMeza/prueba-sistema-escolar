@@ -72,4 +72,10 @@ class DocentesController extends Controller
         
         $post->docentes_materias()->save($materia);
     }
+
+    public function test()
+    {
+        $post = docentes::find(1);  
+        return dd($post);
+    }
 }

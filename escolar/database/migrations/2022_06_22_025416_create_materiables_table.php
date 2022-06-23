@@ -17,8 +17,8 @@ class CreateMateriablesTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('materiable_id');
             $table->string('materiable_type');
-            $table->unsignedBigInteger('materia_id');
-            $table->foreign('materia_id')->references('id')->on('materias')->onDelete('cascade');
+            $table->unsignedBigInteger('materias_id');
+            $table->foreign('materias_id')->references('id')->on('materias')->onDelete('cascade');
             $table->timestamps();
         });
     }
