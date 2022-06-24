@@ -24,7 +24,8 @@ class DocentesController extends Controller
     public function create()
     {
         $docentes = docentes::get();	
-        return view('admin.docentes.create',compact('docentes'));
+        $materias = materias::get();
+        return view('admin.docentes.create',compact('docentes','materias'));
     }
 
     public function store(Request $request)
@@ -52,6 +53,11 @@ class DocentesController extends Controller
 
         $d->save();
 
+        //Almacenar relacion polimorfica de materia
+        $docenteObtenido = docentes::find($d->id);  
+        $materiaObtenida = materias::find($request->materiaSeleccionada);
+        $docenteObtenido->docentes_materias()->save($materiaObtenida);
+
         
 
 
@@ -60,21 +66,29 @@ class DocentesController extends Controller
 		
     }
 
-    public function asignarMateria()
+    public function asignarMateria() //test
     {
-        $post = docentes::find(1);  
+        $post = docentes::find(2);  
+        $materia = materias::find(2); 
 
-        $materia = materias::create([
-            'nombre' => "algoritmia",
-            'inicioSemestre' => "2022-06-22",
-            'finSemestre' => "2022-06-22",
-            'creditos' => 10
-        ]);
+        //$materia = materias::create([
+        //    'nombre' => "algoritmia",
+        //    'inicioSemestre' => "2022-06-22",
+        //    'finSemestre' => "2022-06-22",
+        //    'creditos' => 10
+        //]);
         
         $post->docentes_materias()->save($materia);
     }
 
-    public function test()
+    public function verDocentesMaterias(Request $request)
+    {
+        $idDocente = $request->idDocente;
+        $post = docentes::find($idDocente);  
+        return $post->docentes_materias;
+    }
+
+    public function test() //test
     {
         $post = docentes::find(1);  
         return dd($post);

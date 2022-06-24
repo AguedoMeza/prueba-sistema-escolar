@@ -17,7 +17,7 @@ class materias extends Model
 
     public function materias_alumnos(){
         
-        return $this->morphedByMany('App\docentes','materiable');
+        return $this->morphedByMany('App\alumnos','materiable');
     }
 }
 

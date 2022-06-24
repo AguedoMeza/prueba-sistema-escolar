@@ -47,6 +47,16 @@
                                 <option value="Indefinido">Indefinido</option>
 					        </select>
 						</div>
+
+						<div class="col-md-2">
+							<label>Asignar Materia</label>
+							<select class="form-control" name="materiaSeleccionada" id="materiaSeleccionada" required>
+								<option value=""></option>
+								@foreach($materias AS $m)
+									<option value="{{ $m->id }}">{{ $m->nombre }}</option>
+								@endforeach
+							</select>
+						</div>
 					</div>
 					<br>
 					

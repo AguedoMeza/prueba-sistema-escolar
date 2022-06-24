@@ -26,12 +26,13 @@ Route::get('/docentes/crear', 'DocentesController@create')->name('docentes.creat
 Route::post('/docentes/store', 'DocentesController@store')->name('docentes.store');
 Route::get('/docentes/asignarMateria', 'DocentesController@asignarMateria')->name('docentes.asignarMateria');
 Route::get('/docentes/test', 'DocentesController@test')->name('docentes.test');
+Route::get('/docentes/verDocentesMaterias', 'DocentesController@verDocentesMaterias')->name('docentes.verDocentesMaterias');
 
 Route::get('/materias', 'MateriasController@index')->name('materias');
 Route::get('/materias/store', 'MateriasController@store')->name('materias.store');
 
 Route::get('/alumnos/asignarMateria', 'AlumnosController@asignarMateria')->name('alumnos.asignarMateria');
-Route::get('/alumnos/verAlumnosMaterias', 'AlumnosController@verAlumnosMaterias')->name('alumnos.verAlumnosMaterias');
+Route::get('/alumnos/verAlumnosMaterias/{idDocente}', 'AlumnosController@verAlumnosMaterias')->name('alumnos.verAlumnosMaterias');
 
 Route::get('/alumnos', 'AlumnosController@index')->name('alumnos');
 Route::get('/alumnos/create', 'AlumnosController@create')->name('alumnos.create');
