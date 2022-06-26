@@ -1,0 +1,21 @@
+.right{
+	text-align: right;
+}
+.previa{
+	text-align: center;
+	margin-bottom:10px;
+}
+.previa img{
+	width:70%;
+	height:auto;
+}
+.acciones{
+	margin-bottom:40px;
+}
+.bottom-left {
+	margin-left:1%;
+	position: absolute;
+	bottom: 8px;
+	left: 16px;
+	text-align:left;
+}
